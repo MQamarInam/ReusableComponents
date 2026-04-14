@@ -1,5 +1,5 @@
 //
-//  GenImage.swift
+//  GenTextField.swift
 //  ReusableComponents
 //
 //  Created by Muhammad Qamar on 14/04/2026.
@@ -7,24 +7,24 @@
 
 import UIKit
 
-class GenImage: UIImageView {
+class GenTextField: UITextField {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(imageName: String, contntMode: UIView.ContentMode, tintClr: UIColor, cornrRadius: CGFloat) {
+    init(placeholdr: String, bgClr: UIColor, txtClr: UIColor, cornrRadius: CGFloat) {
         super.init(frame: .zero)
-        contentMode = contntMode
-        tintColor = tintClr
+        placeholder = placeholdr
+        backgroundColor = bgClr
+        textColor = txtClr
         layer.cornerRadius = cornrRadius
-        image = UIImage(systemName: imageName)
-        configureUI()
     }
     
     private func configureUI() {
-        clipsToBounds = true
+        leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: 0))
+        leftViewMode = .always
         translatesAutoresizingMaskIntoConstraints = false
     }
-
+    
 }

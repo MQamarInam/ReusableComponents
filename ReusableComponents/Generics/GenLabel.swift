@@ -24,7 +24,7 @@ class GenLabel: UILabel {
         configureUI()
     }
     
-    func configureUI() {
+    private func configureUI() {
         lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false
     }

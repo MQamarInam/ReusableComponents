@@ -22,7 +22,7 @@ class GenButton: UIButton {
         configureUI()
     }
     
-    func configureUI() {
+    private func configureUI() {
         translatesAutoresizingMaskIntoConstraints = false
     }
 
